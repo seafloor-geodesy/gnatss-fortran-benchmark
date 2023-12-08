@@ -45,4 +45,4 @@ solver:
 
 
 output: # Directory path to output directory
-  path: ./gnatss/outputs/
+  path: ./outputs/

@@ -1,1 +1,0 @@
-# GNATSS (Python)
