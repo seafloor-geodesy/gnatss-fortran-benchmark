@@ -1,8 +1,11 @@
-name: gnatss-fortran
+name: gnatss-benchmark
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.10
   - ipykernel
-  - gnatss==0.1.0
+  - jupyterlab
+  - pip
+  - pip:
+    - gnatss==0.1.0
