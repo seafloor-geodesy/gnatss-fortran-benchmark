@@ -5,6 +5,4 @@ channels:
 dependencies:
   - python=3.10
   - ipykernel
-  - pip
-  - pip:
-    - git+https://github.com/seafloor-geodesy/offshore-geodesy.git
+  - gnatss==0.1.0
