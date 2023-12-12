@@ -35,13 +35,13 @@ solver:
   harmonic_mean_start_depth: -4.0
   input_files:
     sound_speed:
-      path: ~/Repos/SSEC/gnatss-fortran-benchmark/data/NDP1_Ch_Mi_2022_fit
+      path: ./data/NDP1_Ch_Mi_2022_fit
     travel_times: # Glob path to pxp_tt
-      path: ~/Repos/SSEC/gnatss-fortran-benchmark/data/pxp_tt
+      path: ./data/pxp_tt
     gps_solution:  # Glob path to POS_FREED_TRANS_TWTT
-      path: ~/Repos/SSEC/gnatss-fortran-benchmark/data/POS_FREED_TRANS_TWTT
+      path: ./data/POS_FREED_TRANS_TWTT
     deletions: # Path to deletns.dat deletions file used by Chadwell code as well
-      path: ~/Repos/SSEC/gnatss-fortran-benchmark/data/deletns.dat
+      path: ./data/deletns.dat
 
 
 output: # Directory path to output directory
