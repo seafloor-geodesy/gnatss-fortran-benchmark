@@ -37,14 +37,12 @@ set label         = NDP1_center
 set sfg_file      = NDP1.master
 set pxp_data      = pxp_tt
 set gps_file[1]   = POS_FREED_TRANS_TWTT
-#set gps_file[2]   = /whelk0/JdF_16/WG_upgrade/182/posfilter/POS_FIXED_TRANS_TWTT
 set deletes_file  = deletns.dat 
 
 set sv_file_[1]   =  ../ctd/NDP1_Ch_Mi_2022_fit
 set sv_file_[2]   =  ../ctd/NDP1_Ch_Mi_2022_fit
 set sv_file_[3]   =  ../ctd/NDP1_Ch_Mi_2022_fit
 set tide_file     =  ../tide_model/NDP1_22a_tm.osu.tpxo72.2010
-#set tide_file     =  /home/jdesanto/GPSA_PROCESSING/GipsyX/JdF_19/NCL1/tide_model/test
 
 set dist_limit     = 150       ## meters from center to exclude
 #set residual_limit =  250       ## centimeter residual to exclude
