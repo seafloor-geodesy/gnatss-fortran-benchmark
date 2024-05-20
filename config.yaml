@@ -1,24 +1,54 @@
 site_id: NDP1
+campaign: Cascadia
 
+array_center:
+  lat: 44.8319
+  lon: -125.1204
+transponders: # list out all transponder and info
+  - lat: 44.832681360
+    lon: -125.099794900
+    height: -1832.8220
+    internal_delay: 0.200000
+    sv_mean: 1480.767
+  - lat: 44.817929650
+    lon: -125.126649450
+    height: -1829.6450
+    internal_delay: 0.320000
+    sv_mean: 1480.816
+  - lat: 44.842325200
+    lon: -125.134820280
+    height: -1830.7600
+    internal_delay: 0.440000
+    sv_mean: 1480.850
+travel_times_variance: 1e-10
+travel_times_correction: 0.0
+transducer_delay_time: 0.0
+
+# Main input files
+input_files:
+  travel_times: # Glob path to pxp_tt
+    path: ./data/pxp_tt
+
+# Posfilter configuration
+posfilter:
+  export:
+    full: false
+  atd_offsets:
+    forward: 0.0053
+    rightward: 0
+    downward: 0.92813
+  input_files:
+    novatel:
+      path: path/to/NCL1_INSPVAA.dat
+    novatel_std:
+      path: path/to/NCL1_INSSTDEVA.dat
+    gps_positions:
+      path: path/to/GPS_POS_FREED
+
+# Solver configuration
 solver:
   distance_limit: 150
   residual_limit: 40
-  transponders: # list out all transponder and info
-    - lat: 44.832681360
-      lon: -125.099794900
-      height: -1832.8220
-      internal_delay: 0.200000
-      sv_mean: 1480.767
-    - lat: 44.817929650
-      lon: -125.126649450
-      height: -1829.6450
-      internal_delay: 0.320000
-      sv_mean: 1480.816
-    - lat: 44.842325200
-      lon: -125.134820280
-      height: -1830.7600
-      internal_delay: 0.440000
-      sv_mean: 1480.850
   reference_ellipsoid:
     semi_major_axis: 6378137.000
     reverse_flattening: 298.257222101
@@ -26,20 +56,12 @@ solver:
   std_dev: true
   geoid_undulation: -25.81
   bisection_tolerance: 1e-10
-  array_center:
-    lat: 44.8319
-    lon: -125.1204
-  travel_times_variance: 1e-10
-  travel_times_correction: 0.0
-  transducer_delay_time: 0.0
   harmonic_mean_start_depth: -4.0
   input_files:
     sound_speed:
       path: ./data/NDP1_Ch_Mi_2022_fit
-    travel_times: # Glob path to pxp_tt
-      path: ./data/pxp_tt
     gps_solution:  # Glob path to POS_FREED_TRANS_TWTT
-      path: ./data/POS_FREED_TRANS_TWTT
+      path: ./data/gps_solution.csv
     deletions: # Path to deletns.dat deletions file used by Chadwell code as well
       path: ./data/deletns.dat
 
