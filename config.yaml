@@ -61,8 +61,8 @@ solver:
   input_files:
     sound_speed:
       path: ./data/NDP1_Ch_Mi_2022_fit
-      #gps_solution:  # Glob path to POS_FREED_TRANS_TWTT
-    #path: ./data/gps_solution.csv
+    gps_solution:  # Glob path to POS_FREED_TRANS_TWTT
+      path: ./data/gps_solution.csv
     deletions: # Path to deletns.dat deletions file used by Chadwell code as well
       path: ./data/deletns.dat
 
